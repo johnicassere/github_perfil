@@ -11,21 +11,32 @@ function App() {
 
   return (
     <>
-      <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
-      {
-        nomeUsuario.length > 4 && (
-          <>
-            <Perfil nomeUsuario={nomeUsuario} />
-            <Repo nomeUsuario={nomeUsuario} />
-          </>
+      <div className="input_home">
+        {
+          !nomeUsuario && (
+            <>
+            <label>Digite o nome do usuario do Git Hub</label>
+            <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} placeholder="Digite o usuario Git hub" />
+            
+            </>
+          )
+        }
+        {
+          nomeUsuario.length > 4 && (
+            <>
+              <Perfil nomeUsuario={nomeUsuario} />
+              <Repo nomeUsuario={nomeUsuario} />
+            </>
 
-        )
-      }
+          )
+        }
 
-      {/* {formVisivel && (
+
+        {/* {formVisivel && (
     <Formulario/>
   )}
   <button type="button" onClick={() => setFormVisivel(!formVisivel)}>toggle</button> */}
+      </div>
     </>
   )
 }

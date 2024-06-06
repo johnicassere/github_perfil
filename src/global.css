@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: #b8bab9;;
 }
 
 .container{
@@ -14,4 +15,26 @@
 :root{
     --corPrincipal:#b8bab9;
     --corSecundaria: #111;
+    --corItem: #7f7e7e;
+}
+
+.input_home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 180px;
+}
+
+.input_home label{
+    font-size: 18pxpx;
+    font-weight: 700;
+   
+}
+
+.input_home input{
+    margin-top: 16px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    border-bottom: solid 3px #000;
 }
